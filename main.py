@@ -27,7 +27,7 @@ class Student(BaseModel):
 Student_list: List[Student] = []
 
 @app.post("/students")
-def lister_student(students: Student_list):
+def lister_student(students: List[Student]):
     return JSONResponse(status_code=200, content=students)
 
 
